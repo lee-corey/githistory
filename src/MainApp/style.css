@@ -18,6 +18,7 @@
 }
 .main {
     margin: 0px;
+    margin-bottom: 80px;
 }
 .footer {
     position: fixed;
