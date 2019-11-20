@@ -4,6 +4,18 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 In the project directory, you can run:
 
+### `Installation`
+
+* `git clone https://github.com/MebDevelop/githistory.git`
+* cd githistory
+* add your own [GitHub personal access token](https://help.github.com/articles/creating-a-personal-access-token-for-the-command-line/) in a .env file in your root folder
+  * scopes/permissions you need to check: admin:org, repo, user, notifications
+  * REACT_APP_GITHUB_PERSONAL_ACCESS_TOKEN=xxxXXX
+* yarn install
+* yarn start
+* visit `http://localhost:3000`
+
+
 ### `yarn start`
 
 Runs the app in the development mode.<br />
