@@ -1,9 +1,11 @@
 import React from 'react';
+import {Row, Col} from 'react-bootstrap';
 import gql from 'graphql-tag';
 import {Query} from 'react-apollo';
 import {Container, ListGroup} from 'react-bootstrap'
 import Loading from '../Loading';
 import ErrorMessage from '../Error';
+import Moment from 'react-moment';
 
 const GET_COMMIT_HISTORY = gql`
 {
@@ -58,7 +60,14 @@ function History() {
                             {
                                 edges.map((each, i) => { 
                                     return (
-                                        <ListGroup.Item key = {i}>{each.node.message}</ListGroup.Item>
+                                        <ListGroup.Item key = {i}>
+                                            <Row>
+                                                <Col xs={10}>{each.node.message}</Col>
+                                                <Col>
+                                                    <Moment fromNow>{each.node.author.date}</Moment>
+                                                </Col>
+                                            </Row>
+                                        </ListGroup.Item>
                                     )
                                 })
                             }

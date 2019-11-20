@@ -33,7 +33,7 @@ class Loading extends Component {
 
     return (
       <div className={classNames.join(' ')}>
-        <small>
+        <small className="loadingText">
           Loading {new Array(dots).fill(0).map(dot => '.')}
         </small>
       </div>
