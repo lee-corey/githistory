@@ -1,27 +1,25 @@
 import React from 'react';
 import './style.css';
-import {Container, Row, Col} from 'react-bootstrap';
+import {Row, Col} from 'react-bootstrap';
 import History from '../History';
 
 function MainApp() {
     return (
-        <Container>
-            <Row>
-                <Col className="header">
-                    <Row className="headerText">
-                        Git commit history
-                    </Row>
-                </Col>
-                <Col className="main">
-                    <History />
-                </Col>
-                <Col className="footer">
-                    <Row className="footerText">
-                        Developed by MebDevelop
-                    </Row>
+        <div>
+            <Row className="header">
+                <Col className="headerText">
+                    Git commit history
                 </Col>
             </Row>
-        </Container>
+            <Row xs={10} className="main">
+                <History />
+            </Row>
+            <Row className="footer">
+                <Col className="footerText">
+                    Developed by MebDevelop
+                </Col>
+            </Row>
+        </div>
     )
 }
 export default MainApp;

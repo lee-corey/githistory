@@ -1,11 +1,8 @@
 .header, .footer{
-    width: 100%;
     background-color: #282c32;
     padding: 20px;
-}
-.header {
-    position: fixed;
-    top: 0px;
+    width: 100%;
+    margin:0;
 }
 .headerText, .footerText {
     color: white;
@@ -13,6 +10,14 @@
 }
 .footerText{
     text-align: center;
+}
+.header {
+    position: sticky;
+    top: 0px;
+    z-index: 100;
+}
+.main {
+    margin: 0px;
 }
 .footer {
     position: fixed;
